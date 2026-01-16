@@ -1,0 +1,29 @@
+server_config:
+  name: "todo-list-api"
+  version: "0.1.0"
+  port: 8091
+  log_level: "debug"
+  env: "development"
+
+jwt_config:
+  secret: this_is_a_fake_secret
+  expires: 36000 # expire seconds
+
+db_config:
+  driver: sqlite
+  dsn: file::memory:?cache=shared&_foreign_keys=on
+
+github_config:
+  redirect_uri: http://localhost:8091/auth/github/callback
+  client_id: your_github_client_id
+  client_secret: your_github_client_secret
+
+google_config:
+  redirect_uri: http://localhost:8091/auth/google/callback
+  client_id: your_google_client_id
+  client_secret: your_google_client_secret
+
+facebook_config:
+  redirect_uri: http://localhost:8091/auth/facebook/callback
+  client_id: your_facebook_app_id
+  client_secret: your_facebook_app_secret
